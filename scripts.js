@@ -1,3 +1,77 @@
+// const buscar = document.querySelector("#buscar");
+// const card_text = document.querySelector(".card-text");
+// const marca = document.querySelector("#marca");
+// let testAdd = document.createElement("ul");
+
+// const autos = ["renault", "chevrolet", "dodge", "toyota", "subaru"];
+
+// buscar.classList.add("test");
+// console.log(buscar.classList);
+// buscar.classList.remove("test");
+// console.log(buscar.classList);
+// marca.innerHTML = '<a href="#">Renault</a>';
+// testAdd.classList.add("newClass");
+// // testAdd.innerHTML = `<li class='newSubClass'>${autos[0]}</li>`;
+// // testAdd.innerHTML += `<li class='newSubClass'>${autos[1]}</li>`;
+// // testAdd.innerHTML += `<li class='newSubClass'>${autos[2]}</li>`;
+// // testAdd.innerHTML += `<li class='newSubClass'>${autos[3]}</li>`;
+
+// for (auto of autos) {
+//   testAdd.innerHTML += `<li class = 'newSubClass'>${auto}</li>`;
+// }
+// card_text.append(testAdd);
+
+// // /*Eventos del Mause*/
+// const buscar = document.querySelector("#buscar");
+// buscar.addEventListener("click", mostrarAlerta);
+
+// function mostrarAlerta() {
+//   alert("hello world");
+// }
+
+// buscar.addEventListener("mouseover", () => {
+//   console.log("hello world");
+// });
+
+//funciones
+function cambiarModoColor() {
+  body.classList.toggle("bg-dark");
+  if (body.classList.contains("bg-dark")) {
+    botonModoOscuro.innerHTML = '<i class="bi bi-brightness-high-fill"></i>';
+  } else {
+    botonModoOscuro.innerHTML = '<i class="bi bi-moon-fill"></i>';
+  }
+}
+
+function obtenerCriterio(event) {
+  event.preventDefault();
+  //console.log(criterio);
+  marca.innerHTML = buscarImput.value;
+  console.log(buscarImput.value);
+}
+//variables
+const botonModoOscuro = document.querySelector("#color-mode");
+const body = document.body;
+const buscarForm = document.querySelector("#buscar");
+const buscarImput = document.querySelector("#buscar-input");
+const marca = document.querySelector("#marca");
+
+//switch color-mode
+botonModoOscuro.addEventListener("click", cambiarModoColor);
+
+//busqueda
+//cuando se haga submit
+buscarForm.addEventListener("submit", obtenerCriterio);
+// buscarForm.addEventListener("submit", (event) => {
+//   event.preventDefault();
+//   let criterio = buscarImput.value;
+//   console.log(criterio);
+//   buscarForm.reset();
+// });
+
+//Agg form
+
+////////////////////////////////////
 //Administrador de autos
 //funciones
 function addVehiculo() {

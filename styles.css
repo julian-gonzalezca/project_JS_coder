@@ -1,0 +1,14 @@
+.card {
+  margin: 20px 10px 20px 10px;
+}
+footer {
+  min-height: 80px;
+}
+
+.text-footer {
+  font-family: "Share Tech Mono", monospace;
+}
+
+.newClass {
+  background-color: pink;
+}
